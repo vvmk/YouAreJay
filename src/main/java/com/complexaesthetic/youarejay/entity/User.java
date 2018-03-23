@@ -22,8 +22,7 @@ public class User {
 
     private String name;
 
-    @CreatedDate
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date joinedOn;
 
     private String githubId;

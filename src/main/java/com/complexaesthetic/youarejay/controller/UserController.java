@@ -5,9 +5,12 @@ import com.complexaesthetic.youarejay.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.Date;
 
 /**
  * project: YouAreJay
@@ -22,9 +25,16 @@ public class UserController {
     @Autowired
     UserRepository userRepository;
 
-    @RequestMapping(value="/messages", method= RequestMethod.GET)
+    @RequestMapping(value="/users", method= RequestMethod.GET)
     public ResponseEntity<Iterable<User>> getAllUsers() {
         Iterable<User> allUsers = userRepository.findAll();
         return new ResponseEntity<>(allUsers, HttpStatus.OK);
+    }
+
+    @RequestMapping(value="/users", method = RequestMethod.POST)
+    public ResponseEntity<?> createUser(@RequestBody User user) {
+        user.setJoinedOn(new Date());
+        userRepository.save(user);
+        return new ResponseEntity<>(null, HttpStatus.CREATED);
     }
 }

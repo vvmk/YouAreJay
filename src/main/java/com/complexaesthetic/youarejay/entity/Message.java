@@ -18,7 +18,6 @@ public class Message {
     @GeneratedValue
     private Long messageId;
 
-    @CreatedDate
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt;
 
