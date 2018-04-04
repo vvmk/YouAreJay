@@ -28,4 +28,9 @@ public class MessageController {
         return new ResponseEntity<>(allMessages, HttpStatus.OK);
     }
 
+    @RequestMapping(value = "/ids/{id}/messages", method = RequestMethod.POST)
+    public ResponseEntity<?> createMessage() {
+
+        return null;
+    }
 }

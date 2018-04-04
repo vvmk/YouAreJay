@@ -1,7 +1,5 @@
 package com.complexaesthetic.youarejay;
 
-import org.junit.Test;
-
 /**
  * filename:
  * project: YouAreJay
@@ -10,8 +8,4 @@ import org.junit.Test;
  */
 public class YouAreJayApplicationTest {
 
-    @Test
-    public void testApp() {
-        //
-    }
 }

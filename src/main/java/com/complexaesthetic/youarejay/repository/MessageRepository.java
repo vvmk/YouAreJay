@@ -10,4 +10,5 @@ import org.springframework.data.repository.CrudRepository;
  * date: 3/22/18
  */
 public interface MessageRepository extends CrudRepository<Message, Long> {
+    Iterable<Message> findAllForUser(Long userid);
 }
