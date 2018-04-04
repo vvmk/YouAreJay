@@ -1,5 +1,7 @@
 package com.complexaesthetic.youarejay;
 
+import org.junit.Test;
+
 /**
  * filename:
  * project: YouAreJay
@@ -7,4 +9,9 @@ package com.complexaesthetic.youarejay;
  * date: 3/22/18
  */
 public class YouAreJayApplicationTest {
+
+    @Test
+    public void testApp() {
+        //
+    }
 }

@@ -27,4 +27,5 @@ public class MessageController {
         Iterable<Message> allMessages = messageRepository.findAll();
         return new ResponseEntity<>(allMessages, HttpStatus.OK);
     }
+
 }
