@@ -1,7 +1,5 @@
 package com.complexaesthetic.youarejay.entity;
 
-import org.springframework.data.annotation.CreatedDate;
-
 import javax.persistence.*;
 import java.util.Date;
 
