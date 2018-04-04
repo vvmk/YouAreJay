@@ -49,7 +49,7 @@ public class UserControllerTest {
     }
 
     @Test
-    public void testUserGetAllUsers() {
+    public void testUserGetAll() {
         Iterable<User> users = uc.getAllUsers().getBody();
 
         long expected = 3;
@@ -57,5 +57,10 @@ public class UserControllerTest {
 
         verify(userRepository).findAll();
         assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testUserPost() {
+
     }
 }
