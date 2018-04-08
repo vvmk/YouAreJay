@@ -23,8 +23,12 @@ import java.util.Optional;
 @RestController
 public class UserController {
 
+    private UserRepository userRepository;
+
     @Autowired
-    UserRepository userRepository;
+    public UserController(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     @RequestMapping(value="/users", method= RequestMethod.GET)
     public ResponseEntity<Iterable<User>> getAllUsers() {

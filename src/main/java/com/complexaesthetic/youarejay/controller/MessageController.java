@@ -19,8 +19,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MessageController {
 
+    private MessageRepository messageRepository;
+
     @Autowired
-    MessageRepository messageRepository;
+    public MessageController(MessageRepository messageRepository) {
+        this.messageRepository = messageRepository;
+    }
 
     @RequestMapping(value = "/messages", method = RequestMethod.GET)
     public ResponseEntity<Iterable<Message>> getAllMessages() {
